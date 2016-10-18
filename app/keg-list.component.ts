@@ -5,7 +5,7 @@ import { Keg } from './keg.model';
   selector:'keg-list',
   template:`
   <div *ngFor="let currentKeg of childKegList">
-    <div [style.background-color]="getStyle(currentKeg)">
+    <div class="beer-info"[style.background-color]="getBackgroundColor(currentKeg)" [style.font-family] = "getFont(currentKeg)">
       <h3> {{ currentKeg.name }}  </h3>
       <h4>{{ currentKeg.brand }}</h4>
       <li>$ {{ currentKeg.price }}.00</li>
@@ -33,11 +33,19 @@ export class KegListComponent {
     }
   }
 
-  getStyle(pickedKeg:Keg){
-    if(pickedKeg.pintsLeft>5){
-      return "blue";
+  getBackgroundColor(pickedKeg:Keg){
+    if(pickedKeg.pintsLeft>10){
+      return "rgba(51, 153, 255, 0.7)";
     }else{
-      return "red";
+      return "rgba(255, 51, 0, 0.7)";
+    }
+  }
+
+  getFont(pickedKeg:Keg){
+    if(pickedKeg.price>5){
+      return "cursive";
+    }else{
+      return "sans serif";
     }
   }
 

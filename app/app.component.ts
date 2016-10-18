@@ -5,12 +5,24 @@ const MAXPINTS = 25;
   selector: 'my-app',
   template: `
   <div class="container">
-    <h1>My Second Angular 2 App</h1>
-    <keg-list [childKegList]="masterKeg"
-      (clickSender) = "showDetails($event)"></keg-list>
-    <edit-keg [childChosenKeg] = "selectedKeg"
-    (doneClickSender)="finishedEdit()"></edit-keg>
-    <new-keg (newKegSender) = "addKeg($event)"></new-keg>
+    <div class="jumbotron">
+      <h1>My Second Angular 2 App</h1>
+    </div>
+    <div class="row">
+      <keg-list [childKegList]="masterKeg"
+        (clickSender) = "showDetails($event)"></keg-list>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <new-keg (newKegSender) = "addKeg($event)"></new-keg>
+      </div>
+      <div class="col-sm-6">
+        <edit-keg [childChosenKeg] = "selectedKeg"(doneClickSender)="finishedEdit()"></edit-keg>
+      </div>
+
+    </div>
+
+
   </div>
   `
 })

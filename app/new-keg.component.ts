@@ -5,22 +5,22 @@ import { Keg } from './keg.model';
   selector: 'new-keg',
   template:
   `
-  <h1> Enter a new keg</h1>
-  <div>
+  <h2> Enter a new keg</h2>
+  <div class="form-group">
     <label> Enter keg name</label>
-    <input #newName>
+    <input class="form-control" #newName>
   </div>
   <div>
     <label> Enter keg brand</label>
-    <input #newBrand></div>
+    <input class="form-control" #newBrand></div>
   <div>
     <label> Enter keg price</label>
-    <input #newPrice></div>
+    <input class="form-control"  #newPrice></div>
   <div>
     <label> Enter keg % alcohol content</label>
-    <input #newAlcoholContent></div>
+    <input class="form-control"  #newAlcoholContent></div>
   <div>
-  <button class = "btn btn-danger" (click) = "addClicked(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value)">Add Keg</button>
+  <button class = "btn btn-danger submit-button" (click) = "addClicked(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value)">Add Keg</button>
 `
 })
 

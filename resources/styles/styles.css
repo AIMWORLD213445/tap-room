@@ -1,10 +1,51 @@
 h1{
   color:blue;
 }
-.enough{
-  background-color: blue;
+my-app{
+  color: white;
+  text-shadow: 1px 1px 1px black;
 }
 
-.empty{
-  background-color: red;
+.jumbotron{
+  background-image: url(http://pacificadhesives.com/wp-content/uploads/2012/07/Bottle-Labeling-Adhesive.jpg);
+}
+
+.container{
+  background-image: url(https://www.skotcher.com/wall/85c95bce50501ae20a70837676f00112/alcohol-beer-bottle-pour.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.beer-info{
+  float: left;
+  /*margin-left: 50px;
+  margin-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;*/
+  /*border-width: medium;
+  max-width: 33%;
+  border-style: double;
+  border-radius: 10px;*/
+  display: inline-flex;
+flex-wrap: nowrap;
+width: 80%;
+text-align: center;
+
+
+
+}
+label{
+  margin-left: 5%;
+}
+.form-control{
+  margin-left: 5%;
+  max-width: 250px;
+}
+
+.submit-button{
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
