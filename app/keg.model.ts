@@ -1,4 +1,5 @@
 export class Keg {
-  public pintsLeft:number = 15;
+  static MAXPINTS = 20;
+  public pintsLeft:number = Keg.MAXPINTS;
   constructor(public name: string, public brand: string, public price : number, public alcoholContent:number){}
 }

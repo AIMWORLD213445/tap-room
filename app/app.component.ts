@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { Keg } from './keg.model';
-const MAXPINTS = 25;
+
 @Component({
   selector: 'my-app',
   template: `
   <div class="container">
     <div class="jumbotron">
-      <h1>My Second Angular 2 App</h1>
+      <h1>Our Bar</h1>
     </div>
+
     <div class="row">
       <keg-list [childKegList]="masterKeg"
         (clickSender) = "showDetails($event)"></keg-list>
