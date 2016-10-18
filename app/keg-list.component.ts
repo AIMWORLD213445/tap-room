@@ -6,11 +6,11 @@ import { Keg } from './keg.model';
   template:`
   <div *ngFor="let currentKeg of childKegList">
     <div class="beer-info"[style.background-color]="getBackgroundColor(currentKeg)" [style.font-family] = "getFont(currentKeg)">
-      <h3> {{ currentKeg.name }}  </h3>
+      <h3> {{ currentKeg.name }}
       <h4>{{ currentKeg.brand }}</h4>
-      <li>$ {{ currentKeg.price }}.00</li>
-      <li>ABV {{ currentKeg.alcoholContent }}%</li>
-      <li>Pints Left: {{ currentKeg.pintsLeft }}</li>
+      <h6>$ {{ currentKeg.price }}.00</h6>
+      <h6>ABV {{ currentKeg.alcoholContent }}%</h6>
+      <h6>Pints Left: {{ currentKeg.pintsLeft }}</h6></h3>
       <button class="btn btn-primary" (click) = "editButtonClicked(currentKeg)"> Edit Keg</button>
       <button class="btn btn-danger"(click) = "buyPint(currentKeg)"> Buy a pint!</button>
       <button class="btn btn-success"(click) = "refill(currentKeg)"> Fill Keg!</button>
